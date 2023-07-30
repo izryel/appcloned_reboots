@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="29" android:compileSdkVersionCodename="10" android:installLocation="internalOnly" android:versionCode="5000" android:versionName="1.39.0" package="ch.gridvision.ppam.androidautomagic" platformBuildVersionCode="25" platformBuildVersionName="7.1.0">
+	<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="25" />
+	<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true" />
+	<permission android:label="Access Automagic Service" android:name="ch.gridvision.ppam.androidautomagic.ACCESS_SERVICE" android:protectionLevel="signature" />
+	<permission android:label="Access Root Functions" android:name="ch.gridvision.ppam.androidautomagicroot.ACCESS_ROOT_FUNCTIONS" android:protectionLevel="signature" />
+	<permission android:label="Access Workaround Functions" android:name="ch.gridvision.ppam.androidautomagicworkarounds.ACCESS_WORKAROUND_FUNCTIONS" android:protectionLevel="signature" />
+	<uses-permission android:name="com.android.vending.CHECK_LICENSE" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+	<uses-permission android:name="android.permission.BLUETOOTH" />
+	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+	<uses-permission android:name="android.permission.CALL_PHONE" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+	<uses-permission android:name="android.permission.DUMP" />
+	<uses-permission android:name="android.permission.FLASHLIGHT" />
+	<uses-permission android:name="android.permission.GET_TASKS" />
+	<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+	<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+	<uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+	<uses-permission android:name="android.permission.READ_CALENDAR" />
+	<uses-permission android:name="android.permission.READ_CONTACTS" />
+	<uses-permission android:name="android.permission.READ_LOGS" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+	<uses-permission android:name="android.permission.READ_SYNC_STATS" />
+	<uses-permission android:name="android.permission.RECEIVE_SMS" />
+	<uses-permission android:name="android.permission.RECORD_AUDIO" />
+	<uses-permission android:name="android.permission.SEND_SMS" />
+	<uses-permission android:name="android.permission.SET_WALLPAPER" />
+	<uses-permission android:name="android.permission.USE_CREDENTIALS" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.WRITE_CALENDAR" />
+	<uses-permission android:name="android.permission.WRITE_CONTACTS" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="lineageos.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.NFC" />
+	<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+	<uses-permission android:name="com.google.android.gm.permission.READ_CONTENT_PROVIDER" />
+	<uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+	<uses-permission android:name="android.permission.READ_CALL_LOG" />
+	<uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+	<uses-permission android:name="android.permission.UPDATE_DEVICE_STATS" />
+	<uses-permission android:name="com.android.phone.CHANGE_NETWORK_MODE" />
+	<uses-permission android:name="android.permission.ACCESS_SUPERUSER" />
+	<uses-permission android:name="android.permission.BROADCAST_STICKY" />
+	<uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+	<uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+	<uses-permission android:name="android.permission.ANSWER_PHONE_CALLS" />
+	<uses-permission android:name="android.permission.USE_FINGERPRINT" />
+	<uses-permission android:name="android.permission.USE_BIOMETRIC" />
+	<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+	<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+	<uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
+	<uses-permission android:name="android.permission.SET_VOLUME_KEY_LONG_PRESS_LISTENER" />
+	<uses-permission android:name="android.permission.INTERACT_ACROSS_USERS" />
+	<uses-permission android:name="android.permission.SIGNAL_PERSISTENT_PROCESSES" />
+	<uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+	<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
+	<uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+	<uses-permission android:name="lineageos.permission.WRITE_SECURE_SETTINGS" />
+	<uses-permission android:name="cyanogenmod.permission.PUBLISH_CUSTOM_TILE" />
+	<uses-permission android:name="org.kman.AquaMail.datax.GET_ACCOUNTS" />
+	<uses-permission android:name="org.kman.AquaMail.datax.READ_MESSAGES" />
+	<uses-permission android:name="org.kman.AquaMail.datax.MESSAGE_ACTIONS" />
+	<uses-permission android:name="ch.gridvision.pbtm.androidtimerecorder.READ_DATA" />
+	<uses-permission android:name="ch.gridvision.pbtm.androidtimerecorder.WRITE_DATA" />
+	<uses-permission android:name="ch.gridvision.pbtm.androidtimerecorder.LISTEN_EVENT" />
+	<uses-permission android:name="ch.gridvision.ppam.androidautomagic.ACCESS_SERVICE" />
+	<uses-permission android:name="ch.gridvision.ppam.androidautomagicroot.ACCESS_ROOT_FUNCTIONS" />
+	<uses-permission android:name="ch.gridvision.ppam.androidautomagicworkarounds.ACCESS_WORKAROUND_FUNCTIONS" />
+	<uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+	<uses-feature android:name="android.hardware.location" android:required="false" />
+	<uses-feature android:name="android.hardware.location.network" android:required="false" />
+	<uses-feature android:name="android.hardware.location.gps" android:required="false" />
+	<uses-feature android:name="android.hardware.telephony" android:required="false" />
+	<uses-feature android:name="android.hardware.telephony.cdma" android:required="false" />
+	<uses-feature android:name="android.hardware.telephony.gsm" android:required="false" />
+	<uses-feature android:name="android.hardware.faketouch" android:required="false" />
+	<uses-feature android:name="android.hardware.microphone" android:required="false" />
+	<uses-feature android:name="android.hardware.wifi" android:required="false" />
+	<uses-feature android:name="android.hardware.bluetooth" android:required="false" />
+	<uses-feature android:name="android.hardware.camera" android:required="false" />
+	<uses-feature android:name="android.hardware.camera.flash" android:required="false" />
+	<uses-feature android:name="android.hardware.camera.front" android:required="false" />
+	<uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+	<uses-feature android:name="android.hardware.nfc" android:required="false" />
+	<uses-feature android:name="android.hardware.sensor.accelerometer" android:required="false" />
+	<uses-feature android:name="android.hardware.sensor.compass" android:required="false" />
+	<uses-feature android:name="android.hardware.sensor.light" android:required="false" />
+	<uses-feature android:name="android.hardware.sensor.proximity" android:required="false" />
+	<uses-feature android:name="android.hardware.bluetooth_le" android:required="false" />
+	<uses-feature android:name="android.hardware.fingerprint" android:required="false" />
+	<uses-feature android:name="android.software.companion_device_setup" android:required="false" />
+	<uses-feature android:glEsVersion="0x20000" android:required="false" />
+	<application android:allowBackup="true" android:icon="@ac/__launcher_icon" android:label="Automagic Pro" android:name="ch.gridvision.ppam.androidautomagic.AutomagicApplication" android:networkSecurityConfig="@xml/network_security_config" android:roundIcon="@ac/__launcher_icon" android:testOnly="false" android:theme="@style/Theme.automagic">
+		<meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyD_zU6uz2BURAd3S_ud3ymGwTlifAObJ9c" />
+		<meta-data android:name="com.google.android.awareness.API_KEY" android:value="AIzaSyCSXR-kScmXhge5NSXHfJ77x9BawBI2STw" />
+		<meta-data android:name="com.google.android.nearby.messages.API_KEY" android:value="AIzaSyCSXR-kScmXhge5NSXHfJ77x9BawBI2STw" />
+		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+		<uses-library android:name="org.apache.http.legacy" android:required="false" />
+		<meta-data android:name="android.max_aspect" android:value="3.0" />
+		<provider android:authorities="ch.gridvision.ppam.androidautomagic.WidgetImageProvider" android:exported="true" android:name="ch.gridvision.ppam.androidautomagic.WidgetImageProvider" />
+		<activity android:allowTaskReparenting="true" android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:hardwareAccelerated="true" android:icon="@ac/__launcher_icon" android:label="Automagic Pro" android:launchMode="singleTop" android:name="ch.gridvision.ppam.androidautomagic.FlowListActivity" android:roundIcon="@ac/__launcher_icon" android:theme="@style/Theme.OptionalActionBar">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.HOME" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:enabled="false" android:excludeFromRecents="true" android:icon="@ac/__launcher_icon" android:label="Automagic Pro" android:launchMode="singleInstance" android:name="ch.gridvision.ppam.androidautomagic.LauncherTriggerReceiverActivity" android:noHistory="true" android:roundIcon="@ac/__launcher_icon" android:taskAffinity=":Shortcut" android:theme="@style/Theme.TransparentFullscreenNoAnAnimation" android:windowSoftInputMode="stateUnchanged">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.HOME" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:label="Automagic Premium" android:name="ch.gridvision.ppam.androidautomagic.FlowImportActivity" android:noHistory="true" android:theme="@style/Theme.Transparent">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="text/xml" />
+				<data android:mimeType="application/xml" />
+				<data android:mimeType="application/xhtml+xml" />
+				<data android:mimeType="application/x-androidautomagic-flows" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="*/*" />
+				<data android:host="*" />
+				<data android:scheme="file" />
+				<data android:pathPattern=".*\\.xml" />
+				<data android:pathPattern=".*\\..*\\.xml" />
+				<data android:pathPattern=".*\\..*\\..*\\..*\\.xml" />
+				<data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\.xml" />
+				<data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.xml" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:host="automagic4android.com" android:scheme="automagic" />
+				<data android:host="automagic4android.com" android:path="/flow.php" android:scheme="http" />
+				<data android:host="automagic4android.com" android:path="/flow.php" android:scheme="https" />
+			</intent-filter>
+		</activity>
+		<activity android:label="@string/store_as_file_label" android:name="ch.gridvision.ppam.androidautomagic.ReceiveDataActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.SEND" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="*/*" />
+			</intent-filter>
+		</activity>
+		<activity android:label="Automagic Premium" android:name="ch.gridvision.ppam.androidautomagic.LicenseImportActivity" android:noHistory="true" android:theme="@style/Theme.Transparent">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="file" />
+				<data android:mimeType="*/*" />
+				<data android:pathPattern=".*\\.license" />
+				<data android:pathPattern=".*\\..*\\.license" />
+				<data android:pathPattern=".*\\..*\\..*\\..*\\.license" />
+				<data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\.license" />
+				<data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.license" />
+				<data android:host="*" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:host="automagic4android.com" android:mimeType="application/x-androidautomagic-license" android:scheme="http" />
+				<data android:host="automagic4android.com" android:mimeType="application/x-androidautomagic-license" android:scheme="https" />
+			</intent-filter>
+		</activity>
+		<activity android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:label="Flow" android:name="ch.gridvision.ppam.androidautomagic.FlowActivity" android:parentActivityName="ch.gridvision.ppam.androidautomagic.FlowListActivity" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:label="@string/flow_options_title" android:name="ch.gridvision.ppam.androidautomagic.FlowOptionsActivity" android:windowSoftInputMode="stateHidden" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:label="@string/maintenance_title" android:name="ch.gridvision.ppam.androidautomagic.MaintenanceActivity" android:parentActivityName="ch.gridvision.ppam.androidautomagic.FlowListActivity" android:windowSoftInputMode="stateHidden" />
+		<activity android:label="Trigger" android:name="ch.gridvision.ppam.androidautomagic.TriggerActivity" android:windowSoftInputMode="stateHidden" />
+		<activity android:label="Condition" android:name="ch.gridvision.ppam.androidautomagic.ConditionActivity" android:windowSoftInputMode="stateHidden" />
+		<activity android:label="Action" android:name="ch.gridvision.ppam.androidautomagic.ActionActivity" android:windowSoftInputMode="stateHidden" />
+		<activity android:label="@string/location_label" android:name="ch.gridvision.ppam.androidautomagic.LocationPickerActivity" />
+		<activity android:label="@string/log_title" android:name="ch.gridvision.ppam.androidautomagic.logging.LogActivity" />
+		<activity android:label="@string/sd_log_title" android:name="ch.gridvision.ppam.androidautomagic.logging.SDLogActivity" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:label="@string/log_title" android:name="ch.gridvision.ppam.androidautomagic.logging.ProcessLogActivity" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:excludeFromRecents="true" android:label="@string/error_title" android:launchMode="singleInstance" android:name="ch.gridvision.ppam.androidautomagic.ErrorDialogActivity" android:noHistory="true" android:theme="@style/Theme.dialog" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:label="@string/global_variables" android:name="ch.gridvision.ppam.androidautomagic.GlobalVariablesActivity" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:label="@string/widgets" android:name="ch.gridvision.ppam.androidautomagic.WidgetListActivity" />
+		<activity android:label="@string/widget" android:name="ch.gridvision.ppam.androidautomagic.WidgetActivity" android:theme="@style/Theme.wallpaper" />
+		<activity android:label="Text Editor" android:name="ch.gridvision.ppam.androidautomagic.editor.TextEditorActivity" android:windowSoftInputMode="adjustResize" />
+		<activity android:label="@string/settings" android:name="ch.gridvision.ppam.androidautomagic.editor.TextEditorPreferencesActivity" />
+		<activity android:label="Script Editor" android:name="ch.gridvision.ppam.androidautomagic.editor.ScriptEditorActivity" android:windowSoftInputMode="adjustResize" />
+		<activity android:label="@string/script_editor_title" android:name="ch.gridvision.ppam.androidautomagic.editor.ScriptEditorPreferencesActivity" />
+		<activity android:label="@string/settings" android:name="ch.gridvision.ppam.androidautomagic.editor.ScriptEditorColorsActivity" android:windowSoftInputMode="stateHidden" />
+		<activity android:excludeFromRecents="true" android:label="Shortcut" android:launchMode="singleInstance" android:name="ch.gridvision.ppam.androidautomagic.ShortcutReceiverActivity" android:noHistory="true" android:taskAffinity=":Shortcut" android:theme="@style/Theme.Transparent" android:windowSoftInputMode="stateUnchanged">
+			<intent-filter>
+				<action android:name="ch.gridvision.ppam.androidautomagic.intent.action.TRIGGER_SHORTCUT" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="application/x-androidautomagic" />
+			</intent-filter>
+		</activity>
+		<activity android:excludeFromRecents="true" android:label="Automagic Premium" android:launchMode="singleInstance" android:name="ch.gridvision.ppam.androidautomagic.AssistReceiverActivity" android:noHistory="true" android:taskAffinity=":Assist" android:theme="@style/Theme.Transparent" android:windowSoftInputMode="stateUnchanged">
+			<intent-filter>
+				<action android:name="android.intent.action.ASSIST" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:excludeFromRecents="true" android:label="Automagic Premium" android:launchMode="singleInstance" android:name="ch.gridvision.ppam.androidautomagic.GeneralActionReceiverActivity" android:noHistory="true" android:taskAffinity=":GeneralAction" android:theme="@style/Theme.Transparent" android:windowSoftInputMode="stateUnchanged">
+			<intent-filter>
+				<action android:name="android.speech.action.WEB_SEARCH" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.VOICE_COMMAND" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:excludeFromRecents="true" android:label="@string/trigger_send_intent_received_default_name" android:launchMode="singleInstance" android:name="ch.gridvision.ppam.androidautomagic.SendIntentReceiverActivity" android:noHistory="true" android:taskAffinity=":SendIntent" android:theme="@style/Theme.Transparent" android:windowSoftInputMode="stateUnchanged">
+			<intent-filter>
+				<action android:name="android.intent.action.SEND" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="*/*" />
+			</intent-filter>
+		</activity>
+		<activity android:excludeFromRecents="true" android:label="@string/trigger_send_multiple_intent_received_default_name" android:launchMode="singleInstance" android:name="ch.gridvision.ppam.androidautomagic.SendMultipleIntentReceiverActivity" android:noHistory="true" android:taskAffinity=":SendMultipleIntent" android:theme="@style/Theme.Transparent" android:windowSoftInputMode="stateUnchanged">
+			<intent-filter>
+				<action android:name="android.intent.action.SEND_MULTIPLE" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="*/*" />
+			</intent-filter>
+		</activity>
+		<activity android:excludeFromRecents="true" android:label="@string/trigger_view_web_url_intent_received_default_name" android:launchMode="singleInstance" android:name="ch.gridvision.ppam.androidautomagic.ViewWebUrlIntentReceiverActivity" android:noHistory="true" android:taskAffinity=":ViewUrlIntent" android:theme="@style/Theme.Transparent" android:windowSoftInputMode="stateUnchanged">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="http" />
+				<data android:scheme="https" />
+				<data android:mimeType="*/*" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="http" />
+				<data android:scheme="https" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="http" />
+				<data android:scheme="https" />
+				<data android:host="*" />
+			</intent-filter>
+		</activity>
+		<activity android:exported="false" android:label="@string/select_package_title" android:launchMode="standard" android:name="ch.gridvision.ppam.androidautomagic.AppIconPickerActivity" android:theme="@style/Theme.Transparent" />
+		<activity android:enabled="false" android:excludeFromRecents="true" android:label="@string/trigger_launch_browser_app_intent_received_default_name" android:launchMode="singleInstance" android:name="ch.gridvision.ppam.androidautomagic.LaunchBrowserAppIntentReceiverActivity" android:noHistory="true" android:taskAffinity=":LaunchBrowser" android:theme="@style/Theme.Transparent" android:windowSoftInputMode="stateUnchanged">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.APP_BROWSER" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:enabled="false" android:excludeFromRecents="true" android:label="@string/trigger_launch_calculator_app_intent_received_default_name" android:launchMode="singleInstance" android:name="ch.gridvision.ppam.androidautomagic.LaunchCalculatorAppIntentReceiverActivity" android:noHistory="true" android:taskAffinity=":LaunchCalculator" android:theme="@style/Theme.Transparent" android:windowSoftInputMode="stateUnchanged">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.APP_CALCULATOR" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:enabled="false" android:excludeFromRecents="true" android:label="@string/trigger_launch_calendar_app_intent_received_default_name" android:launchMode="singleInstance" android:name="ch.gridvision.ppam.androidautomagic.LaunchCalendarAppIntentReceiverActivity" android:noHistory="true" android:taskAffinity=":LaunchCalendar" android:theme="@style/Theme.Transparent" android:windowSoftInputMode="stateUnchanged">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.APP_CALENDAR" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:enabled="false" android:excludeFromRecents="true" android:label="@string/trigger_launch_contacts_app_intent_received_default_name" android:launchMode="singleInstance" android:name="ch.gridvision.ppam.androidautomagic.LaunchContactsAppIntentReceiverActivity" android:noHistory="true" android:taskAffinity=":LaunchContacts" android:theme="@style/Theme.Transparent" android:windowSoftInputMode="stateUnchanged">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.APP_CONTACTS" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:enabled="false" android:excludeFromRecents="true" android:label="@string/trigger_launch_mail_app_intent_received_default_name" android:launchMode="singleInstance" android:name="ch.gridvision.ppam.androidautomagic.LaunchMailAppIntentReceiverActivity" android:noHistory="true" android:taskAffinity=":LaunchMail" android:theme="@style/Theme.Transparent" android:windowSoftInputMode="stateUnchanged">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.APP_EMAIL" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:enabled="false" android:excludeFromRecents="true" android:label="@string/trigger_launch_music_app_intent_received_default_name" android:launchMode="singleInstance" android:name="ch.gridvision.ppam.androidautomagic.LaunchMusicAppIntentReceiverActivity" android:noHistory="true" android:taskAffinity=":LaunchMusic" android:theme="@style/Theme.Transparent" android:windowSoftInputMode="stateUnchanged">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.APP_MUSIC" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="ch.gridvision.ppam.androidautomagic.ShowInputMethodSelectorActivity" android:noHistory="true" android:taskAffinity=":InputMethodSelectorActivity" android:theme="@style/Theme.Transparent" android:windowSoftInputMode="stateUnchanged" />
+		<activity android:label="@string/automagic_shortcut_activity_label" android:name="ch.gridvision.ppam.androidautomagic.ShortcutCreatorActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.CREATE_SHORTCUT" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:label="@string/automagic_shortcut_icon_activity_label" android:name="ch.gridvision.ppam.androidautomagic.ShortcutIconActivity" android:theme="@style/Theme.dialog" />
+		<receiver android:name="ch.gridvision.ppam.androidautomagic.NotificationStatusBarReceiver" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:excludeFromRecents="true" android:name="ch.gridvision.ppam.androidautomagic.NotificationStatusBarReceiverActivity" android:noHistory="true" android:taskAffinity=":NotificationStatusBarReceiverActivity" android:theme="@style/Theme.TransparentFullscreenNoAnAnimation" />
+		<activity android:excludeFromRecents="true" android:label="Automagic NFC" android:launchMode="singleTop" android:name="ch.gridvision.ppam.androidautomagic.NFCReceiverActivity" android:noHistory="true" android:taskAffinity=":NFC" android:theme="@style/Theme.Transparent">
+			<intent-filter>
+				<action android:name="android.nfc.action.NDEF_DISCOVERED" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:host="gleeo.com" android:path="/automagic_nfc_trigger" android:scheme="http" />
+				<data android:host="automagic4android.com" android:path="/automagic_nfc_trigger" android:scheme="http" />
+				<data android:host="automagic4android.com" android:path="/automagic_nfc_trigger" android:scheme="https" />
+				<data android:host="automagic4android.com" android:path="/automagic_nfc_trigger" android:scheme="automagic" />
+			</intent-filter>
+		</activity>
+		<activity android:enabled="true" android:excludeFromRecents="true" android:label="Automagic Generic NFC" android:launchMode="singleTop" android:name="ch.gridvision.ppam.androidautomagic.NFCReceiverGenericActivity" android:noHistory="true" android:taskAffinity=":NFC" android:theme="@style/Theme.Transparent">
+			<intent-filter>
+				<action android:name="android.nfc.action.NDEF_DISCOVERED" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="*/*" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.nfc.action.TECH_DISCOVERED" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.nfc.action.TECH_DISCOVERED" />
+			</intent-filter>
+			<meta-data android:name="android.nfc.action.TECH_DISCOVERED" android:resource="@xml/nfc_tech_filter" />
+			<intent-filter>
+				<action android:name="android.nfc.action.TAG_DISCOVERED" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.nfc.action.TAG_DISCOVERED" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:label="NFC Writer" android:launchMode="singleTop" android:name="ch.gridvision.ppam.androidautomagic.NFCWriterActivity" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:label="NFC Reader" android:launchMode="singleTop" android:name="ch.gridvision.ppam.androidautomagic.NFCReaderActivity" />
+		<activity android:allowTaskReparenting="true" android:excludeFromRecents="true" android:label="Flashlight" android:launchMode="singleInstance" android:name="ch.gridvision.ppam.androidautomagic.FlashlightActivity" android:taskAffinity=":Flashlight" android:theme="@style/Theme.TransparentFullscreenNoAnAnimation" />
+		<activity android:label="Screen Brightness" android:launchMode="singleInstance" android:name="ch.gridvision.ppam.androidautomagic.ScreenBrightnessActivity" android:noHistory="true" android:theme="@style/Theme.Transparent" android:windowSoftInputMode="stateUnchanged">
+			<intent-filter>
+				<action android:name="ch.gridvision.ppam.androidautomagic.intent.action.SCREEN_BRIGHTNESS" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:label="@string/confirmation_dialog_title" android:launchMode="singleTask" android:name="ch.gridvision.ppam.androidautomagic.AskUserActivity" android:taskAffinity=":AskUser" android:theme="@style/Theme.TransparentFullscreenNoAnAnimation" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:label="@string/input_dialog_title" android:launchMode="singleTask" android:name="ch.gridvision.ppam.androidautomagic.InputDialogActivity" android:taskAffinity=":InputDialog" android:theme="@style/Theme.TransparentFullscreenNoAnAnimation" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:excludeFromRecents="true" android:label="@string/input_speech_title" android:launchMode="singleTask" android:name="ch.gridvision.ppam.androidautomagic.InputSpeechActivity" android:taskAffinity=":InputSpeech" android:theme="@style/Theme.TransparentFullscreenNoAnAnimation" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:label="Activity" android:launchMode="singleTask" android:name="ch.gridvision.ppam.androidautomagic.ActivityResultProxyActivity" android:taskAffinity=":Proxy" android:theme="@style/Theme.TransparentFullscreenNoAnAnimation" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:label="@string/message_dialog_title" android:launchMode="singleTask" android:name="ch.gridvision.ppam.androidautomagic.MessageDialogActivity" android:taskAffinity=":MessageDialog" android:theme="@style/Theme.TransparentFullscreenNoAnAnimation" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:label="Debug Dialog" android:launchMode="singleTask" android:name="ch.gridvision.ppam.androidautomagic.DebugActivity" android:taskAffinity=":DebugDialog" android:theme="@style/Theme.TransparentFullscreenNoAnAnimation" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:excludeFromRecents="true" android:label="Unlock Slide Lock" android:launchMode="singleInstance" android:name="ch.gridvision.ppam.androidautomagic.DismissSlideToUnlockKeyguardActivity" android:noHistory="true" android:taskAffinity=":UnlockSlideToUnlock" android:theme="@style/Theme.TransparentFullscreenNoAnAnimation" />
+		<service android:exported="true" android:label="Automagic Premium Service" android:name="ch.gridvision.ppam.androidautomagic.service.ActionManagerService" android:permission="ch.gridvision.ppam.androidautomagic.ACCESS_SERVICE" />
+		<service android:exported="true" android:label="Automagic Premium Plugin Callback Service" android:name="ch.gridvision.ppam.androidautomagic.service.PluginCallbackService" />
+		<service android:name="ch.gridvision.ppam.androidautomagic.wear.WearListenerService">
+			<intent-filter>
+				<action android:name="com.google.android.gms.wearable.DATA_CHANGED" />
+				<action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED" />
+				<data android:host="*" android:scheme="wear" />
+			</intent-filter>
+		</service>
+		<receiver android:name="ch.gridvision.ppam.androidautomagic.BroadcastReceiver">
+			<intent-filter>
+				<action android:name="android.bluetooth.device.action.ACL_CONNECTED" />
+				<action android:name="android.bluetooth.device.action.ACL_DISCONNECTED" />
+				<action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+				<action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.MEDIA_MOUNTED" />
+				<data android:scheme="file" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+			</intent-filter>
+		</receiver>
+		<receiver android:enabled="true" android:name="ch.gridvision.ppam.androidautomagic.MediaButtonReceiver">
+			<intent-filter android:priority="-1">
+				<action android:name="android.intent.action.MEDIA_BUTTON" />
+			</intent-filter>
+		</receiver>
+		<activity android:label="@string/settings" android:name="ch.gridvision.ppam.androidautomagic.PreferencesActivity" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:label="@string/main_dir_title" android:name="ch.gridvision.ppam.androidautomagic.MainDataDirectoryActivity" android:windowSoftInputMode="stateHidden" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:label="@string/external_sd_card_enabling_title" android:name="ch.gridvision.ppam.androidautomagic.ExternalSDCardEnablingActivity" android:windowSoftInputMode="stateHidden" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:label="@string/internal_storage_enabling_title" android:name="ch.gridvision.ppam.androidautomagic.InternalStorageSAFEnablingActivity" android:windowSoftInputMode="stateHidden" />
+		<activity android:label="@string/about_automagic" android:name="ch.gridvision.ppam.androidautomagic.AboutActivity" />
+		<activity android:label="@string/statistics" android:name="ch.gridvision.ppam.androidautomagic.statistics.StatisticsActivity" />
+		<activity android:label="@string/regex_tester" android:name="ch.gridvision.ppam.androidautomagic.RegexTesterActivity" android:windowSoftInputMode="stateHidden" />
+		<activity android:label="Web" android:name="ch.gridvision.ppam.androidautomagic.WebActivity" android:process=":Web" />
+		<activity android:label="@string/file_picker_label" android:name="ch.gridvision.ppam.androidautomagic.FilePickerActivity" />
+		<activity android:label="@string/dropbox_file_picker_label" android:name="ch.gridvision.ppam.androidautomagic.DropboxFilePickerActivity" />
+		<activity android:label="@string/ftp_file_picker_label" android:name="ch.gridvision.ppam.androidautomagic.FTPFilePickerActivity" />
+		<activity android:label="@string/google_drive_file_picker_label" android:name="ch.gridvision.ppam.androidautomagic.GoogleDriveFilePickerActivity" />
+		<activity android:excludeFromRecents="true" android:label="@string/accessibility_info_label" android:launchMode="singleInstance" android:name="ch.gridvision.ppam.androidautomagic.accessibility.AccessibilityInfoActivity" android:noHistory="true" android:taskAffinity=":AccessibilityInfo" android:theme="@style/Theme.TransparentFullscreenNoAnAnimation" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:label="@string/help_label" android:name="ch.gridvision.ppam.androidautomagic.HelpActivity" android:process=":Help" android:windowSoftInputMode="stateHidden" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:label="@string/catalog_label" android:name="ch.gridvision.ppam.androidautomagic.CatalogActivity" android:process=":Catalog" android:windowSoftInputMode="stateHidden" />
+		<activity android:allowTaskReparenting="true" android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:label="@string/forum_label" android:launchMode="singleTask" android:name="ch.gridvision.ppam.androidautomagic.ForumActivity" android:process=":Forum" android:taskAffinity=":Forum" android:windowSoftInputMode="stateHidden" />
+		<activity android:clearTaskOnLaunch="true" android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:label="@string/scan_barcode_label" android:launchMode="singleInstance" android:name="ch.gridvision.ppam.androidautomagic.barcode.ScanBarcodeActivity" android:noHistory="true" android:screenOrientation="landscape" android:stateNotNeeded="true" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:windowSoftInputMode="stateAlwaysHidden" />
+		<activity android:label="@string/toggle_app_widget_configure_label" android:name="ch.gridvision.ppam.androidautomagic.ToggleAppWidgetConfigureActivity">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+			</intent-filter>
+		</activity>
+		<receiver android:label="@string/toggle_app_widget_label" android:name="ch.gridvision.ppam.androidautomagic.ToggleAppWidgetProvider">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="ch.gridvision.ppam.androidautomagic.intent.action.TOGGLE_APP_WIDGET_UPDATE" />
+			</intent-filter>
+			<meta-data android:name="android.appwidget.provider" android:resource="@xml/toggle_appwidget_info" />
+		</receiver>
+		<activity android:label="@string/custom_app_widget_configure_label" android:name="ch.gridvision.ppam.androidautomagic.CustomAppWidgetConfigureActivity">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+			</intent-filter>
+		</activity>
+		<receiver android:label="@string/custom_app_widget_label" android:name="ch.gridvision.ppam.androidautomagic.CustomAppWidgetProvider">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="ch.gridvision.ppam.androidautomagic.intent.action.CUSTOM_APP_WIDGET_UPDATE" />
+			</intent-filter>
+			<meta-data android:name="android.appwidget.provider" android:resource="@xml/custom_appwidget_info" />
+		</receiver>
+		<receiver android:label="@string/device_admin_label" android:name="ch.gridvision.ppam.androidautomagic.AutomagicDeviceAdminReceiver" android:permission="android.permission.BIND_DEVICE_ADMIN">
+			<meta-data android:name="android.app.device_admin" android:resource="@xml/device_admin" />
+			<intent-filter>
+				<action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+			</intent-filter>
+		</receiver>
+		<activity android:configChanges="keyboard|orientation|screenSize" android:launchMode="singleTask" android:name="com.dropbox.core.android.AuthActivity">
+			<intent-filter>
+				<data android:scheme="db-v1lstrsnjuta4be" />
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:configChanges="keyboard|orientation|screenSize" android:exported="false" android:name="ch.gridvision.ppam.androidautomagic.TwitterAuthenticatorActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="automagic-ppam-twitter" />
+			</intent-filter>
+		</activity>
+		<activity android:label="@string/help" android:name="ch.gridvision.ppam.androidautomagic.keyboard.AutotypeHelpActivity" android:theme="@style/Theme.dialog" />
+		<service android:enabled="@bool/useAccessibilityBindPermission" android:label="Automagic Premium" android:name="ch.gridvision.ppam.androidautomagic.AccessibilityService" android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+			<intent-filter>
+				<action android:name="android.accessibilityservice.AccessibilityService" />
+			</intent-filter>
+			<meta-data android:name="android.accessibilityservice" android:resource="@xml/accessibilityservice" />
+		</service>
+		<service android:enabled="@bool/doNotUseAccessibilityBindPermission" android:label="Automagic Premium" android:name="ch.gridvision.ppam.androidautomagic.AccessibilityService2">
+			<intent-filter>
+				<action android:name="android.accessibilityservice.AccessibilityService" />
+			</intent-filter>
+			<meta-data android:name="android.accessibilityservice" android:resource="@xml/accessibilityservice" />
+		</service>
+		<service android:name="ch.gridvision.ppam.androidautomagic.keyboard.AutotypeInputMethodService" android:permission="android.permission.BIND_INPUT_METHOD">
+			<intent-filter>
+				<action android:name="android.view.InputMethod" />
+			</intent-filter>
+			<meta-data android:name="android.view.im" android:resource="@xml/input_method" />
+		</service>
+		<service android:enabled="@bool/useNotificationListenerService" android:label="@string/notification_detection_service_name" android:name="ch.gridvision.ppam.androidautomagic.NotificationDetectorService" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+			<intent-filter>
+				<action android:name="android.service.notification.NotificationListenerService" />
+			</intent-filter>
+		</service>
+		<service android:icon="@drawable/ic_stat_wand" android:label="Tile 1" android:name="ch.gridvision.ppam.androidautomagic.service.qstiles.QSTileService1" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+			<intent-filter>
+				<action android:name="android.service.quicksettings.action.QS_TILE" />
+			</intent-filter>
+		</service>
+		<service android:icon="@drawable/ic_stat_wand" android:label="Tile 2" android:name="ch.gridvision.ppam.androidautomagic.service.qstiles.QSTileService2" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+			<intent-filter>
+				<action android:name="android.service.quicksettings.action.QS_TILE" />
+			</intent-filter>
+		</service>
+		<service android:icon="@drawable/ic_stat_wand" android:label="Tile 3" android:name="ch.gridvision.ppam.androidautomagic.service.qstiles.QSTileService3" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+			<intent-filter>
+				<action android:name="android.service.quicksettings.action.QS_TILE" />
+			</intent-filter>
+		</service>
+		<service android:icon="@drawable/ic_stat_wand" android:label="Tile 4" android:name="ch.gridvision.ppam.androidautomagic.service.qstiles.QSTileService4" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+			<intent-filter>
+				<action android:name="android.service.quicksettings.action.QS_TILE" />
+			</intent-filter>
+		</service>
+		<service android:icon="@drawable/ic_stat_wand" android:label="Tile 5" android:name="ch.gridvision.ppam.androidautomagic.service.qstiles.QSTileService5" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+			<intent-filter>
+				<action android:name="android.service.quicksettings.action.QS_TILE" />
+			</intent-filter>
+		</service>
+		<service android:icon="@drawable/ic_stat_wand" android:label="Tile 6" android:name="ch.gridvision.ppam.androidautomagic.service.qstiles.QSTileService6" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+			<intent-filter>
+				<action android:name="android.service.quicksettings.action.QS_TILE" />
+			</intent-filter>
+		</service>
+		<service android:icon="@drawable/ic_stat_wand" android:label="Tile 7" android:name="ch.gridvision.ppam.androidautomagic.service.qstiles.QSTileService7" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+			<intent-filter>
+				<action android:name="android.service.quicksettings.action.QS_TILE" />
+			</intent-filter>
+		</service>
+		<service android:icon="@drawable/ic_stat_wand" android:label="Tile 8" android:name="ch.gridvision.ppam.androidautomagic.service.qstiles.QSTileService8" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+			<intent-filter>
+				<action android:name="android.service.quicksettings.action.QS_TILE" />
+			</intent-filter>
+		</service>
+		<provider android:authorities="ch.gridvision.ppam.androidautomagic.sharing_file_provider" android:exported="false" android:grantUriPermissions="true" android:name="ch.gridvision.ppam.androidautomagic.FileProvider">
+			<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_provider_paths" />
+		</provider>
+		<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+		<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
+		<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+		<meta-data android:name="android.support.VERSION" android:value="26.1.0" />
+		<meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT" />
+		<meta-data android:name="com.google.android.wearable.beta.app" android:resource="@xml/android_wear_micro_apk" />
+		<meta-data android:name="com.applisto.appcloner.name" android:value="Automagic Pro" />
+		<meta-data android:name="com.applisto.appcloner.originalName" android:value="Automagic Premium" />
+		<meta-data android:name="com.applisto.appcloner.originalPackageName" android:value="Y2guZ3JpZHZpc2lvbi5wcGFtLmFuZHJvaWRhdXRvbWFnaWM=" />
+		<meta-data android:name="com.applisto.appcloner.cloneNumber" android:value="-1" />
+		<meta-data android:name="com.applisto.appcloner.cloneSource" android:value="installed_app" />
+		<meta-data android:name="com.applisto.appcloner.cloneTimestamp" android:value="\ 1690699933762" />
+		<meta-data android:name="com.applisto.appcloner.cloneBuildSerial" android:value="8101785e4a1f87c7" />
+		<meta-data android:name="com.applisto.appcloner.cloneBuildManufacturer" android:value="LGE" />
+		<meta-data android:name="com.applisto.appcloner.cloneBuildModel" android:value="Nexus 5" />
+		<meta-data android:name="com.applisto.appcloner.clonePremiumVersion" android:value="true" />
+		<meta-data android:name="com.applisto.appcloner.forceDeviceLock" android:value="false" />
+		<meta-data android:name="com.applisto.appcloner.runtimeModdingOptions" android:value="true" />
+		<meta-data android:name="com.applisto.appcloner.bundleOriginalApp" android:value="false" />
+		<meta-data android:name="com.applisto.appcloner.versionCode" android:value="4900" />
+		<meta-data android:name="com.applisto.appcloner.versionName" android:value="1.38.0" />
+		<meta-data android:name="com.applisto.appcloner.appClonerVersionCode" android:value="19111210" />
+		<meta-data android:name="com.applisto.appcloner.appClonerVersionName" android:value="1.5.32" />
+		<meta-data android:name="com.applisto.appcloner.appClonerClassesVersionCode" android:value="20190829" />
+		<meta-data android:name="com.applisto.appcloner.originalSignatures" android:value="AQAAABwAAABhAG4AZAByAG8AaQBkAC4AYwBvAG4AdABlAG4AdAAuAHAAbQAuAFMAaQBnAG4AYQB0AHUAcgBlAAAAAAB7AgAAMIICdzCCAeCgAwIBAgIETCROwzANBgkqhkiG9w0BAQUFADB/MQswCQYDVQQGEwJDSDEOMAwGA1UEBxMFQWFyYXUxJDAiBgNVBAoTG2dyaWR2aXNpb24gZW5naW5lZXJpbmcgR21iSDEUMBIGA1UECxMLRGV2ZWxvcG1lbnQxJDAiBgNVBAMTG2dyaWR2aXNpb24gZW5naW5lZXJpbmcgR21iSDAgFw0xMDA2MjUwNjM3NTVaGA8yMTEwMDYwMTA2Mzc1NVowfzELMAkGA1UEBhMCQ0gxDjAMBgNVBAcTBUFhcmF1MSQwIgYDVQQKExtncmlkdmlzaW9uIGVuZ2luZWVyaW5nIEdtYkgxFDASBgNVBAsTC0RldmVsb3BtZW50MSQwIgYDVQQDExtncmlkdmlzaW9uIGVuZ2luZWVyaW5nIEdtYkgwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAJaliOssGc7oUQo3hEdp/6xqNwiZ3G5arGJunEX/LA8wGZCf9kqrwhR0vsYdX6WM5a1yZYuKGIkOp41DJeBWiWzEU72vz9DS7TkrAgvhFSt9/bG4KBuok56++PD0vwC1/hESULh/UrS+mimVtHd4DETqt0ZJeuZDkZXqQtKIAodhAgMBAAEwDQYJKoZIhvcNAQEFBQADgYEAem0bJr3/dq69nlDcCdhesU2e7rUQ/JQ2J0Ufo9WRFPI27wR87SNIhn6ZbRerecbVjWX/MHpx1eDbNw/yedHabcXHJxbDI4aTITSRGRfiCB2Phh85r40UQe3R1q0Cm1IDfihRiVete4U/xRl3I0JsORngRO2uvtvbPZHtcfyuTnsA" />
+		<meta-data android:name="com.android.vending.derived.apk.id" android:value="1" />
+		<provider android:authorities="ch.gridvision.ppam.androidautomagic.com.applisto.appcloner.classes.DefaultProvider" android:exported="true" android:initOrder="2147483647" android:name="com.applisto.appcloner.classes.DefaultProvider" />
+		<service android:exported="true" android:name="com.applisto.appcloner.service.RemoteService" />
+		<receiver android:exported="true" android:name="com.applisto.appcloner.classes.DefaultProvider$DefaultReceiver" />
+		<activity android:exported="true" android:name="com.applisto.appcloner.classes.DefaultProvider$MyActivity" />
+		<receiver android:name="com.applisto.appcloner.classes.FakeCamera$FakeCameraReceiver">
+			<intent-filter>
+				<action android:name="com.applisto.appcloner.action.FAKE_CAMERA_SELECT_CAMERA_PICTURE" />
+				<action android:name="com.applisto.appcloner.action.FAKE_CAMERA_ROTATE_CLOCKWISE" />
+				<action android:name="com.applisto.appcloner.action.FAKE_CAMERA_ROTATE_ANTI_CLOCKWISE" />
+			</intent-filter>
+		</receiver>
+		<receiver android:name="com.applisto.appcloner.classes.DisableClipboardAccess$ClearClipboardReceiver" />
+		<activity android:name="com.applisto.appcloner.classes.FakeCamera$FakeCameraActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+	</application>
+	<uses-permission android:name="android.permission.READ_LOGS" />
+	<uses-permission android:name="android.permission.FLASHLIGHT" />
+	<uses-permission android:name="net.dinglisch.android.tasker.PERMISSION_RUN_TASKS" />
+	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+	<uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.USE_FINGERPRINT" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.BLUETOOTH" />
+	<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="android.permission.READ_SETTINGS" />
+	<uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+</manifest>
